@@ -1,9 +1,9 @@
-version: "3.7"
+version: "24.0.6"
 
-servics:
-  mlapp:
-    container_name: mlapp
-    image: docerhubaccountname/mlapp
+services:
+  appPredictionDSFinal:
+    container_name: appPredictionDSFinal
+    image: matthewdulcich/appPredictionDSFinal
     ports:
       - "8001:8001"
     build:

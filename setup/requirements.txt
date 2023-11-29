@@ -1,0 +1,4 @@
+scikit-learn==1.0.1
+flask>=2.0.0
+# nltk==3.6.6
+# "import nltk; nlt.download('owm-1.4'); nltk.donload('wordnet')

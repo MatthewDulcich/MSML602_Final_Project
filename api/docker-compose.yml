@@ -1,9 +1,9 @@
 version: "24.0.6"
 
 services:
-  appPredictionDSFinal:
-    container_name: appPredictionDSFinal
-    image: matthewdulcich/appPredictionDSFinal
+  apppredictiondsfinal:
+    container_name: apppredictiondsfinal
+    image: matthewdulcich/apppredictiondsfinal
     ports:
       - "8001:8001"
     build:

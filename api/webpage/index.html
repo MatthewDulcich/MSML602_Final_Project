@@ -1,0 +1,25 @@
+<!-- File for the website frontend -->
+
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Data Science Project</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Data Science Project</h1>
+        <p>Welcome to our data science project!</p>
+
+        <div class="content">
+            <!-- Your content goes here -->
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

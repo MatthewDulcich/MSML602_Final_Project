@@ -1,7 +1,11 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 from utilities import predict_pipeline
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='./webpage', static_folder='./webpage')
+
+@app.route("/")
+def index():
+    return render_template('index.html')
 
 @app.post('/predict')
 def predict():
@@ -20,4 +24,4 @@ def predict():
     return result
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', debug=False, port=8001)
+    app.run(host='0.0.0.0', debug=False, port=8002)

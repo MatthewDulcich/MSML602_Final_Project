@@ -1,5 +1,4 @@
-from flask import Flask
-from flask import jsonify, request
+from flask import Flask, jsonify, request
 from utilities import predict_pipeline
 
 app = Flask(__name__)
@@ -12,10 +11,10 @@ def predict():
     except KeyError:
         return jsonify({'error': 'No text sent'})
     
-    sample = [sample]
+    #sample = [sample]
     predictions = predict_pipeline(sample)
     try:
-        result = jsonify(predictions[0])
+        result = jsonify(predictions) #predictions[0]
     except TypeError as e:
         return jsonify({'error': str(e)})
     return result

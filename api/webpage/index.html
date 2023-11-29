@@ -7,19 +7,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Data Science Project</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <!--<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">--> <!--Use for flask implementation-->
+    <link rel="stylesheet" type="text/css" href="style.css"> <!--Use only for webpage creation-->
 </head>
 
 <body>
-    <div class="container">
+    <header>
         <h1>Data Science Project</h1>
-        <p>Welcome to our data science project!</p>
+        <!-- Other header content or navigation if needed -->
+    </header>
 
-        <div class="content">
-            <!-- Your content goes here -->
-        </div>
+    <div class="container">
+        <aside class="sidebar">
+            <button onclick="showDataView()">Data View</button>
+            <button onclick="showAnalysisView()">Analysis View</button>
+            <!-- Add more buttons for different views -->
+        </aside>
+
+        <main class="main-content">
+            <!-- Content of the selected view will be displayed here -->
+        </main>
     </div>
 
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <footer>
+        <p>&copy; 2023 Data Science Project</p>
+    </footer>
+    <!--<script src="{{ url_for('static', filename='script.js') }}"></script>--> <!--Use for flask implementation-->
+    <script src="script.js"></script> <!--Use only for webpage creation-->    
 </body>
+
 </html>

@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request, render_template
+from flask import Flask, jsonify, request, render_template, redirect
 from utilities import predict_pipeline
 from flask_cors import CORS
 
@@ -24,6 +24,7 @@ def predict():
     except TypeError as e:
         return jsonify({'error': str(e)})
     return result
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=False, port=8002)

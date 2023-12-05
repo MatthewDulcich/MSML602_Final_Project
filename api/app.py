@@ -1,7 +1,9 @@
 from flask import Flask, jsonify, request, render_template
 from utilities import predict_pipeline
+from flask_cors import CORS
 
 app = Flask(__name__, template_folder='./webpage', static_folder='./webpage')
+CORS(app)
 
 @app.route("/")
 def index():

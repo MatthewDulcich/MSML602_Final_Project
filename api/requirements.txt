@@ -1,5 +1,6 @@
-python==3.9.18
+#python==3.9.18
 scikit-learn==1.0.1
 flask>=2.0.0
+flask-cors
 # nltk==3.6.6
 # "import nltk; nlt.download('owm-1.4'); nltk.donload('wordnet')

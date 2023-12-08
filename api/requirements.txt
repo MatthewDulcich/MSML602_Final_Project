@@ -1,5 +1,5 @@
-#python==3.9.18
-scikit-learn==1.0.1
+#python==3.10.12
+scikit-learn>=1.0.1
 flask>=2.0.0
 flask-cors
 # nltk==3.6.6

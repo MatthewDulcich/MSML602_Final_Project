@@ -47,7 +47,7 @@ function showPostData() {
     mainContent.innerHTML = '<h2>POST View</h2><p>This is the POST view content.</p> <div id="response"></div>';
 
     const dataToSend = { text: 'input test text' };
-    postData('http://127.0.0.1:8001/predict', dataToSend)
+    postData('http://127.0.0.1:5001/predict', dataToSend)
         .then(data => {
             // console.log(data)
 

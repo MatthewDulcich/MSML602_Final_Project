@@ -15,21 +15,27 @@ The dataset used in this project is scraped from the Google Play Store. It conta
 
 ## Methodology
 
-1. **Data Collection:** Scraping data from the Google Play Store using [mention the tools/libraries used].
+1. **Data Collection:** Scraping data from the Google Play Store using google-play-scraper, selenium, google-search-results, and SerpApi.
 2. **Data Preprocessing:** Cleaning, feature extraction, and transformation of the scraped data.
 3. **Model Development:** Utilizing machine learning algorithms like [list the algorithms used] to train and evaluate the predictive model.
-4. **Deployment:** Hosting the model in a Docker container with Flask to provide a web service for app prediction.
+4. **Deployment:** Hosting the model in a Docker container with Flask, uWSGI, and NGINX to provide a web service for app prediction.
 
 ## Dependencies
 
-- Python 3.9.18
-- Libraries: Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, Flask, Docker, etc. (Specify versions if necessary)
+- Python 3.10.12
+- Libraries: Found in requirements.txt
 
 ## Usage
+
+1. **Clone Repository:**
+    ```
+    git clone https://github.com/MatthewDulcich/MSML602_Final_Project.git
+    ```
 
 1. **Setting Up:**
     - Ensure Python 3.10.12 is installed.
     - Install required libraries:
+    - Use conda or pythons venv
     ```
     pip install -r requirements.txt
     ```
@@ -47,14 +53,15 @@ The dataset used in this project is scraped from the Google Play Store. It conta
 
 ## Future Improvements
 
-- Fine-tuning model hyperparameters for better accuracy.
-- Improving the user interface and experience of the Flask app.
+- Fine-tuning model hyperparameters for better accuracy using more data over time.
+- Improving the user interface.
+- Host the web app.
 
 ## Contributors
 
 - [Matthew Dulcich](https://github.com/MatthewDulcich)
 - [Yajat Uppal](https://github.com/Agenzmain)
-- [NK-Kaushik](https://github.com/NK-Kaushik)
+- [Neelagriri Keerthi Kaushik](https://github.com/NK-Kaushik)
 
 ## Acknowledgments
 

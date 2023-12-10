@@ -32,15 +32,16 @@ The dataset used in this project is scraped from the Google Play Store. It conta
     git clone https://github.com/MatthewDulcich/MSML602_Final_Project.git
     ```
 
-1. **Setting Up:**
+2. **Setting Up:**
     - Ensure Python 3.10.12 is installed.
+    - Ensure Docker is installed.
+    - Activate or create conda or python venv.
     - Install required libraries:
-    - Use conda or pythons venv
     ```
     pip install -r requirements.txt
     ```
 
-2. **Running the Flask App:**
+3. **Running the Flask App:**
     - Build and run the Docker container:
     ```
     docker compose up --build .

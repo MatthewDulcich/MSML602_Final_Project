@@ -28,6 +28,7 @@ fastjsonschema
 Flask 
 Flask-Cors 
 fqdn 
+google-play-scraper #added
 idna 
 importlib-metadata 
 importlib-resources 
@@ -96,6 +97,7 @@ requests
 rfc3339-validator 
 rfc3986-validator 
 rpds-py
+selenium #added
 scikit-learn 
 SciPy 
 Send2Trash 
@@ -124,3 +126,11 @@ websocket-client
 Werkzeug
 widgetsnbextension
 zipp
+
+h11
+outcome
+sortedcontainers
+terminado
+trio-websocket
+wsproto
+google-search-results

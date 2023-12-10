@@ -1,2 +1,2 @@
 #probably use for the cronos script
-#* * * * * python preprocessing.py
+#* * * * * python web_scraper.py

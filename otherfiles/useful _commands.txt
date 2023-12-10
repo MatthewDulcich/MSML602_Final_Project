@@ -1,5 +1,5 @@
 #command for flask response for the app.py file
-curl -X POST -H "Content-Type: application/json" -d '{"text": "input test text"}' 0.0.0.0:8001/predict
+curl -X POST -H "Content-Type: application/json" -d '{"text": "input test text"}' 0.0.0.0:5001/predict
 
 #docker build
 docker compose up --build

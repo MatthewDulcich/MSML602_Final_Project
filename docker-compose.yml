@@ -1,0 +1,20 @@
+version: '3.10.12'
+
+services:
+
+  apppredictiondsfinal:
+    container_name: apppredictiondsfinal
+    restart: always
+    image: matthewdulcich/apppredictiondsfinal
+    expose:
+      - 5001
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+  
+  nginx:
+    build: ./nginx
+    container_name: nginx
+    restart: always
+    ports:
+      - "80:80"

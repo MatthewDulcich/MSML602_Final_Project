@@ -5,14 +5,33 @@ function showDataView() {
     // Get the main content area
     const mainContent = document.querySelector('.main-content');
 
-    // Set or load the data view content into the main content area
-    mainContent.innerHTML = '<h2>Data View</h2><p>This is the data view content.</p>';
+    // Fetch data from the server
+    fetch('/display')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.text();
+        })
+        .then(data => {
+            // Set the fetched data into the #dataTable element
+            const dataTable = document.getElementById('dataTable');
+            if (dataTable) {
+                dataTable.innerHTML = data;
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+
+    // Set or load the initial content into the main content area
+    mainContent.innerHTML = '<div id="dataTable"></div>';
 }
 
 function showAnalysisView() {
     // Get the main content area
     const mainContent = document.querySelector('.main-content');
-
+    
     // Set or load the analysis view content into the main content area
     mainContent.innerHTML = '<h2>Analysis View</h2><p>This is the analysis view content.</p>';
 }
@@ -80,4 +99,3 @@ function showPostData() {
             console.error('There was a problem with the showPostData request:', error);
         });
 }
-

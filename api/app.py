@@ -1,6 +1,7 @@
 from flask import Flask, jsonify, request, render_template, redirect
 from modules_scripts.preprocessing import predict_pipeline
 from flask_cors import CORS
+import pandas as pd
 
 app = Flask(__name__, template_folder='./webpage', static_folder='./webpage')
 CORS(app)
@@ -25,6 +26,20 @@ def predict():
         return jsonify({'error': str(e)})
     return result
 
+@app.route('/display')
+def display_table():
+    # Assuming the CSV file is in the 'data' folder relative to the script
+    file_path = 'data/google_play_apps.csv'
+
+    # Read the CSV file using pandas
+    df = pd.read_csv(file_path)
+    # print(df).head()
+
+    # Convert DataFrame to an HTML table
+    html_table = df.to_html(classes="table table-striped", index=False)
+
+    # Render the HTML table within a template
+    return render_template('table_display.html', table=html_table)
 
 if __name__ == "__main__":
     #app.run(host='0.0.0.0', debug=False, port=5001)

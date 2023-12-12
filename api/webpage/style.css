@@ -9,17 +9,25 @@ header {
     color: white;
     padding: 20px;
     text-align: center;
+    width: 100vw;
+    position: fixed;
 }
 
-.container {
+.containerss {
     display: flex;
+    width: 100vw;
+    margin-right: auto;
+    padding-left: 0px;
 }
+
+
 
 .sidebar {
     width: 200px;
     height: 100vh;
     background-color: #f4f4f4;
     padding: 20px;
+    padding-top: 150px;
 }
 
 .sidebar button {
@@ -35,6 +43,7 @@ header {
 .main-content {
     flex: 1;
     padding: 20px;
+    padding-top: 150px;
 }
 
 footer {
@@ -45,4 +54,16 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+table {
+    width: 100%; /* Set table width to 100% of its container */
+    max-width: 100%; /* Ensure table doesn't exceed its container's width */
+    font-size: 14px; /* Adjust the font size */
+    border-spacing: 0;
+}
+
+/* Optional: Adjust table cell padding */
+td, th {
+    padding: 8px; /* Adjust cell padding */
 }

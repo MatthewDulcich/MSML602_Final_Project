@@ -8,6 +8,10 @@
     <meta charset="UTF-8">
     <title>Data Science Project</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"> <!--Use for flask implementation-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.22.1/bootstrap-table.min.css" rel="stylesheet">
+
+
     <!--<link rel="stylesheet" type="text/css" href="style.css">--> <!--Use only for webpage creation-->
 </head>
 
@@ -17,9 +21,9 @@
         <!-- Other header content or navigation if needed -->
     </header>
 
-    <div class="container">
+    <div class="containerss">
         <aside class="sidebar">
-            <button onclick="showDataView()">Data View</button>
+            <button onclick="showDataView()">Data View</button> 
             <button onclick="showAnalysisView()">Analysis View</button>
             <button onclick="showPostData()">Send POST Request</button>
 
@@ -37,6 +41,13 @@
         <p>&copy; 2023 Data Science Project</p>
     </footer>
     <script src="{{ url_for('static', filename='script.js') }}"></script> <!--Use for flask implementation-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.22.1/bootstrap-table.min.js"></script>
+
+
+
     <!--<script src="script.js"></script>--> <!--Use only for webpage creation-->    
 </body>
 

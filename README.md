@@ -44,7 +44,7 @@ The dataset used in this project is scraped from the Google Play Store. It conta
 3. **Running the Flask App:**
     - Build and run the Docker container:
     ```
-    docker compose up --build .
+    docker compose up --build
     ```
     - Access the Flask app at `http://localhost`.
 

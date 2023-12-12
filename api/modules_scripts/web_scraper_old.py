@@ -1,6 +1,9 @@
 # echo "John, 30, New York" >> sample.csv
 # echo "Alice, 25, San Francisco" >> sample.csv
-
+'''
+Deprecated: do not use
+Test file until real web_scraper.py was made
+'''
 import os
 import csv
 

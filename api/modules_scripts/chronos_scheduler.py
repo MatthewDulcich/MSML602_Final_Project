@@ -1,3 +1,6 @@
+'''
+Scheduler to run the web scraping daily we can also use it to call the script to refresh the model daily.
+'''
 # You should use a chronos or chorontab program instead of a while loop
 #* * * * * python web_scraper.py
 

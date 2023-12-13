@@ -87,9 +87,6 @@ if __name__ == "__main__":
     
     # Convert the list of dictionaries into a pandas DataFrame
     df = pd.json_normalize(apps_data)
-
-    get_current_date()
-
     
     df['date_scraped'] = get_current_date()
     

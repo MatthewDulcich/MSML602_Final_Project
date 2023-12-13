@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, request, render_template, redirect
 from modules_scripts.preprocessing import predict_pipeline
+from modules_scripts.graphs import plot_histogram
 from flask_cors import CORS
 import pandas as pd
 
@@ -40,6 +41,15 @@ def display_table():
 
     # Render the HTML table within a template
     return render_template('table_display.html', table=html_table)
+
+@app.route('/graphing')
+def graph():
+    
+    # html_graph = plot_histogram()
+
+    # Render the HTML table within a template
+    return render_template('interactive_plot.html')
+
 
 if __name__ == "__main__":
     #app.run(host='0.0.0.0', debug=False, port=5001)

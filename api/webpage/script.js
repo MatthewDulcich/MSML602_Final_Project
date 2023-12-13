@@ -29,12 +29,56 @@ function showDataView() {
 }
 
 function showAnalysisView() {
+
     // Get the main content area
     const mainContent = document.querySelector('.main-content');
-    
-    // Set or load the analysis view content into the main content area
-    mainContent.innerHTML = '<h2>Analysis View</h2><p>This is the analysis view content.</p>';
+
+     // Fetch the HTML file content using Fetch API
+     fetch('/graphing')
+     .then(response => response.text())
+     .then(data => {
+         // Display the fetched HTML content in the 'html-content' div
+         mainContent.innerHTML = data;
+     })
+     .catch(error => console.error('Error fetching HTML:', error));
+    //  mainContent.innerHTML = '<div id="dataTable"></div>';
 }
+
+
+    // // var interactivePlot = document.getElementById('interactive-plot');
+    // // // Paste the generated mpld3 plot HTML here
+    // // interactivePlot.innerHTML = `<div id="interactive-plot"></div>`;
+
+    // // Get the main content area
+    // const mainContent = document.querySelector('.main-content');
+
+    // // Fetch data from the server
+    // fetch('/graph')
+    //     .then(response => {
+    //         if (!response.ok) {
+    //             throw new Error('Network response was not ok');
+    //         }
+    //         return response.text();
+    //     })
+    //     .then(data => {
+    //         // Set the fetched data into the #dataTable element
+    //         const interactive_plot = document.getElementById('interactive-plot');
+    //         if (interactive_plot) {
+    //             interactive_plot.innerHTML = data;
+    //             // Initialize mpld3 plot
+    //             mpld3.draw_figure('interactive-plot', eval(interactive_plot.textContent));
+    //         }
+    //     })
+    //     .catch(error => {
+    //         console.error('Error:', error);
+    //     });
+
+    // // Set or load the initial content into the main content area
+    // mainContent.innerHTML = '<div id="interactive-plot"></div>';
+// }
+
+
+
 
 function postData(url = '', data = {}) {
     return fetch(url, {

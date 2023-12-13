@@ -135,3 +135,5 @@ trio-websocket
 wsproto
 google-search-results
 schedule
+matplotlib
+mpld3

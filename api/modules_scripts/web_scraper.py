@@ -3,7 +3,10 @@ import json
 from urllib.parse import parse_qsl, urlsplit
 import pandas as pd
 import os
+import datetime
 from secret_key import API_KEY
+
+
 # from google.colab import files
 
 def scrape_apps_from_all_pages(params):
@@ -34,6 +37,14 @@ def scrape_apps_from_all_pages(params):
             break
  
     return apps
+
+def get_current_date():
+    # Get current date and time
+    current_datetime = datetime.datetime.now()
+
+   # Format year, month, and day as a single string
+    return current_datetime.strftime("%Y-%m-%d")
+
 
 if __name__ == "__main__":
     data_filepath = '../data'
@@ -76,10 +87,15 @@ if __name__ == "__main__":
     
     # Convert the list of dictionaries into a pandas DataFrame
     df = pd.json_normalize(apps_data)
+
+    get_current_date()
+
+    
+    df['date_scraped'] = get_current_date()
     
     # Save the DataFrame to a CSV file
     csv_filename = 'google_play_apps.csv'
     # Define the file path within the data folder
     file_path = os.path.join(data_filepath, csv_filename)
 
-    df.to_csv(file_path, index=False)
+    df.to_csv(file_path, mode='a', header=False, index=False)
